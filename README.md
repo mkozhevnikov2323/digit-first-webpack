@@ -1,1 +1,1 @@
-# digit-first-webpack
+# digit-course
