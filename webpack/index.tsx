@@ -1,6 +1,7 @@
 import { TEST_VARS } from '@/constants';
 
 const testFn = (a: number, b: number) => {
+  const test_var = 'test';
   return a + b;
 };
 
