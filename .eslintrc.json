@@ -18,10 +18,14 @@
     },
     "project": "./tsconfig.json"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier",
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
     "simple-import-sort",
-    "filenames"],
-    "settings": {
+    "filenames"
+  ],
+  "settings": {
     "react": {
       "version": "detect"
     }
@@ -39,7 +43,7 @@
         "extensions": [".js", ".jsx", ".tsx"]
       }
     ],
-    "react/prop-types": "off", 
+    "react/prop-types": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/naming-convention": [
       "error",
@@ -66,9 +70,5 @@
       }
     ]
   },
-  "filenames/match-regex": [
-      "error",
-      "^[a-z0-9-]+(\\.test)?$",
-      true
-    ]  
+  "filenames/match-regex": ["error", "^[a-z0-9-]+(\\.test)?$", true]
 }
