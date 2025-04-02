@@ -4,14 +4,17 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
-    "lint:fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
-    "pretty": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,scss,md,html}\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "pretty": "prettier --write",
     "prepare": "husky"
   },
   "lint-staged": {
     "*.{md,html,json,css,scss}": "npm run pretty",
-    "*.{js,jsx,ts,tsx}": "npm run pretty && npm run lint:fix"
+    "*.{js,jsx,ts,tsx}": [
+      "npm run pretty",
+      "npm run lint:fix"
+    ]
   },
   "keywords": [],
   "author": "",
