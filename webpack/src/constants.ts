@@ -5,9 +5,6 @@ export enum Test_VARS {
   B = 2434,
 }
 
-
-
-
 let testVar = 'qwewqe';
 
 const foo = 'bar';
