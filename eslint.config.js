@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
@@ -58,40 +57,12 @@ export default [
       'simple-import-sort/exports': 'error',
       'react/jsx-filename-extension': [
         'warn',
-        { extensions: ['.js', '.jsx', '.tsx'] },
+        { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
       ],
       'react/prop-types': 'off',
-
       '@typescript-eslint/no-unused-vars': ['error'],
-      '@typescript-eslint/naming-convention': [
-        'error',
-        {
-          selector: 'default',
-          format: ['camelCase'],
-          leadingUnderscore: 'allow',
-          filter: {
-            regex: '^@',
-            match: false,
-          },
-        },
-        {
-          selector: 'variableLike',
-          format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-        },
-        { selector: 'typeLike', format: ['PascalCase'] },
-        {
-          selector: 'interface',
-          format: ['PascalCase'],
-          custom: {
-            regex: '^I[A-Z]',
-            match: false,
-          },
-        },
-      ],
     },
   },
   js.configs.recommended,
   prettierConfig,
 ];
-
-/* eslint-enable @typescript-eslint/naming-convention */
