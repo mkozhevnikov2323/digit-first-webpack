@@ -5,10 +5,14 @@
   "type": "module",
   "scripts": {
     "build": "tsc && tsc-alias",
-    "lint": "eslint \"**/*.{ts,tsx}\"",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
-    "pretty": "prettier --write \"**/*.{ts,tsx,js,jsx,json,scss}\"",
+    "pretty": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,scss,md,html}\"",
     "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{md,html,json,css,scss}": "npm run pretty",
+    "*.{js,jsx,ts,tsx}": "npm run pretty && npm run lint:fix"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +31,7 @@
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "prettier": "^3.5.3",
     "tsc-alias": "^1.8.13",
     "typescript": "^5.8.2"
