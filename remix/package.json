@@ -8,5 +8,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@remix-run/node": "^2.16.4",
+    "@remix-run/serve": "^2.16.4",
+    "isbot": "^4.4.0"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.16.4",
+    "vite": "^6.2.5"
+  }
 }
