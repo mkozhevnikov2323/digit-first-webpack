@@ -4,8 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "lint": "eslint . --ignore-pattern webpack/build/",
-    "lint:fix": "eslint . --fix --ignore-pattern webpack/build/",
+    "lint": "eslint . --ignore-pattern webpack/build/ --ignore-pattern vite/dist/",
+    "lint:fix": "eslint . --ignore-pattern webpack/build/ --ignore-pattern vite/dist/ --fix",
     "pretty": "prettier --write",
     "prepare": "husky"
   },
@@ -13,7 +13,7 @@
     "*.{md,html,json,css,scss}": "npm run pretty",
     "*.{js,jsx,ts,tsx}": [
       "npm run pretty",
-      "npm run lint:fix"
+      "eslint . --ignore-pattern webpack/build/ --ignore-pattern vite/dist/ --fix"
     ]
   },
   "keywords": [],
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@eslint/js": "^9.23.0",
     "@eslint/migrate-config": "^1.4.1",
+    "@types/node": "^22.14.0",
     "@typescript-eslint/eslint-plugin": "^8.29.0",
     "@typescript-eslint/parser": "^8.29.0",
     "eslint": "^9.23.0",

@@ -12,7 +12,7 @@ import simpleImportSort from 'eslint-plugin-simple-import-sort';
 */
 export default [
   {
-    ignores: ['node_modules/', 'build/'],
+    ignores: ['node_modules/', 'build/', 'dist/'],
   },
   {
     files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
