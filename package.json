@@ -4,8 +4,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --ignore-pattern webpack/build/",
+    "lint:fix": "eslint . --fix --ignore-pattern webpack/build/",
     "pretty": "prettier --write",
     "prepare": "husky"
   },

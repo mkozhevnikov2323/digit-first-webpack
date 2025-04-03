@@ -2,8 +2,11 @@
   "name": "webpack",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_OPTIONS='--import tsx' webpack serve --disable-interpret --config webpack.config.ts --env port=3000",
+    "build:prod": "NODE_OPTIONS='--import tsx' webpack --disable-interpret --config webpack.config.ts --env mode=production",
+    "build:dev": "NODE_OPTIONS='--import tsx' webpack --disable-interpret --config webpack.config.ts --env mode=development"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +22,7 @@
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
     "webpack": "^5.98.0",
     "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^6.0.1",

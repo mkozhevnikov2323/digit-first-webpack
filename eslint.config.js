@@ -23,6 +23,7 @@ export default [
         window: 'readonly',
         document: 'readonly',
         navigator: 'readonly',
+        console: 'readonly',
         NodeJS: true,
       },
       parser: tsParser,
