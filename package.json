@@ -1,0 +1,42 @@
+{
+  "name": "pet-project-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint . --ignore-pattern webpack/build/ --ignore-pattern vite/dist/ --ignore-pattern remix/public/build/ --ignore-pattern remix/build/ --ignore-pattern nextjs/.next",
+    "lint:fix": "eslint . --ignore-pattern webpack/build/ --ignore-pattern vite/dist/ --ignore-pattern remix/public/build/ --ignore-pattern remix/build/ --ignore-pattern nextjs/.next --fix",
+    "pretty": "prettier --write",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{md,html,json,css,scss}": "npm run pretty",
+    "*.{js,jsx,ts,tsx}": [
+      "npm run pretty",
+      "eslint . --ignore-pattern webpack/build/ --ignore-pattern vite/dist/ --ignore-pattern remix/public/build/ --ignore-pattern remix/build/ --ignore-pattern nextjs/.next --fix"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@eslint/migrate-config": "^1.4.1",
+    "@types/node": "^22.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.5",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
+    "tsc-alias": "^1.8.13",
+    "typescript": "^5.8.2"
+  }
+}

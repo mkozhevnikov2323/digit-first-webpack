@@ -2,11 +2,30 @@
   "name": "webpack",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_OPTIONS='--import tsx' webpack serve --disable-interpret --config webpack.config.ts --env port=3000",
+    "build:prod": "NODE_OPTIONS='--import tsx' webpack --disable-interpret --config webpack.config.ts --env mode=production",
+    "build:dev": "NODE_OPTIONS='--import tsx' webpack --disable-interpret --config webpack.config.ts --env mode=development"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
+    "webpack": "^5.98.0",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  }
 }

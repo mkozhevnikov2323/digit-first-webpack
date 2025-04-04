@@ -1,0 +1,8 @@
+.vscode
+node_modules
+webpack/build
+dist
+remix/build
+
+.cache
+remix/public/build
