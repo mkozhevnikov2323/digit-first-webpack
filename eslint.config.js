@@ -24,6 +24,7 @@ export default [
         document: 'readonly',
         navigator: 'readonly',
         console: 'readonly',
+        module: 'readonly',
         NodeJS: true,
       },
       parser: tsParser,
