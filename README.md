@@ -98,6 +98,19 @@
 
 ### 4. Nextjs
 
+- Используется: Next v15, React v19, turbopack
+- Поддержка: TypeScript, алиасы @
+- Установка зависимостей:
+  `cd nextjs`
+  `npm install`
+
+- Запуск разработки:
+  `npm run dev`
+
+- Запуск сборки для продакшн:
+  `npm run build`
+  `npm run start`
+
 ---
 
 ## Скрипты (из корня)
