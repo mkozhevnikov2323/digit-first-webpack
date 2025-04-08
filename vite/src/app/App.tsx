@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Button } from '@/components/Button';
+import { Rating } from '@/components/Rating';
 import { Tabs } from '@/components/Tabs';
 
 export const App: React.FC = (): React.ReactNode => {
@@ -8,6 +9,7 @@ export const App: React.FC = (): React.ReactNode => {
     <div>
       <Tabs />
       <Button />
+      <Rating />
     </div>
   );
 };
