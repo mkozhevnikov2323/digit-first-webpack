@@ -1,4 +1,5 @@
 import { ChakraProvider, defaultSystem } from '@chakra-ui/react';
+import { MantineProvider } from '@mantine/core';
 import React from 'react';
 
 interface AppProvidersProps {
@@ -6,5 +7,9 @@ interface AppProvidersProps {
 }
 
 export const AppProviders: React.FC<AppProvidersProps> = ({ children }) => {
-  return <ChakraProvider value={defaultSystem}>{children}</ChakraProvider>;
+  return (
+    <ChakraProvider value={defaultSystem}>
+      <MantineProvider>{children}</MantineProvider>
+    </ChakraProvider>
+  );
 };
