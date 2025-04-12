@@ -27,6 +27,7 @@ export default [
         module: 'readonly',
         NodeJS: true,
         require: 'readonly',
+        fetch: 'readonly',
       },
       parser: tsParser,
       parserOptions: {
@@ -64,6 +65,7 @@ export default [
       ],
       'react/prop-types': 'off',
       '@typescript-eslint/no-unused-vars': ['error'],
+      '@typescript-eslint/no-explicit-any': ['off'],
     },
   },
   js.configs.recommended,
