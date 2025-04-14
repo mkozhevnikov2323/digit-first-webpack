@@ -28,10 +28,11 @@ export default [
         NodeJS: true,
         require: 'readonly',
         fetch: 'readonly',
+        SVGSVGElement: 'readonly',
       },
       parser: tsParser,
       parserOptions: {
-        project: './tsconfig.base.json',
+        // project: './tsconfig.base.json',
         ecmaFeatures: {
           jsx: true,
         },
