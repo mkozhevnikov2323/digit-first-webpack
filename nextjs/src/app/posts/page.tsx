@@ -74,6 +74,7 @@ export default function Posts() {
         <Table<DataType>
           columns={columns}
           dataSource={data}
+          rowKey="id"
         />
       )}
     </div>
