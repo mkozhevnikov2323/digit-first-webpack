@@ -6,6 +6,11 @@ import filenames from 'eslint-plugin-filenames';
 import prettierPlugin from 'eslint-plugin-prettier';
 import react from 'eslint-plugin-react';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /** 
   @type {import("eslint").Linter.Config[]}
@@ -28,10 +33,12 @@ export default [
         NodeJS: true,
         require: 'readonly',
         fetch: 'readonly',
+        SVGSVGElement: 'readonly',
       },
       parser: tsParser,
       parserOptions: {
-        project: './tsconfig.base.json',
+        project: ['./tsconfig.base.json', './nextjs/tsconfig.json'],
+        tsconfigRootDir: __dirname,
         ecmaFeatures: {
           jsx: true,
         },
