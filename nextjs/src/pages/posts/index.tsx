@@ -1,5 +1,7 @@
+'use client';
 import type { TableProps } from 'antd';
 import { Table } from 'antd';
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 
 interface DataType {
@@ -19,7 +21,7 @@ const columns: TableProps<DataType>['columns'] = [
     title: 'Title',
     dataIndex: 'title',
     key: 'title',
-    render: (text) => <a>{text}</a>,
+    render: (text, record) => <Link href={`/posts/${record.id}`}>{text}</Link>,
   },
   {
     title: 'Body',
@@ -58,7 +60,6 @@ export default function Posts() {
         setIsLoading(false);
       }
     };
-
     fetchPosts();
   }, []);
 
