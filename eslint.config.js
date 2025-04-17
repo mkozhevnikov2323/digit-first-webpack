@@ -34,6 +34,7 @@ export default [
         require: 'readonly',
         fetch: 'readonly',
         SVGSVGElement: 'readonly',
+        localStorage: 'readonly',
       },
       parser: tsParser,
       parserOptions: {
