@@ -13,7 +13,7 @@
     "*.{md,html,json,css,scss}": "npm run pretty",
     "*.{js,jsx,ts,tsx}": [
       "npm run pretty",
-      "eslint . --ignore-pattern webpack/build/ --ignore-pattern vite/dist/ --ignore-pattern remix/public/build/ --ignore-pattern remix/build/ --ignore-pattern nextjs/.next --ignore-pattern nextjs/styled-system/ --ignore-pattern cosmoship/dist/ --fix"
+      "eslint . --ignore-pattern webpack/build/ --ignore-pattern vite/dist/ --ignore-pattern remix/public/build/ --ignore-pattern remix/build/ --ignore-pattern nextjs/.next --ignore-pattern nextjs/styled-system/ --ignore-pattern nextjs/ --ignore-pattern cosmoship/dist/ --fix"
     ]
   },
   "keywords": [],
